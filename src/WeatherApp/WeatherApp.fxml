@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WeatherApp.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <ImageView fitHeight="478.0" fitWidth="648.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/WeatherBackground.jpg" />
+         </image></ImageView>
+      <Pane fx:id="Pane" prefHeight="522.0" prefWidth="645.0">
+         <children>
+            <ImageView fx:id="backgroundPane" fitHeight="529.0" fitWidth="648.0" layoutY="-3.0">
+               <image>
+                  <Image url="@../../images/WeatherBackground.jpg" />
+               </image>
+            </ImageView>
+            <TextField fx:id="day0Field" alignment="CENTER" editable="false" layoutX="84.0" layoutY="84.0" visible="false" />
+            <TextField fx:id="temp0Field" editable="false" layoutX="84.0" layoutY="109.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="102.0" prefWidth="149.0" visible="false">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </TextField>
+            <Button fx:id="convertButton" layoutX="242.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleConvertButton" text="Convert" visible="false" />
+            <ImageView fx:id="icon0View" fitHeight="190.0" fitWidth="256.0" layoutX="357.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="cond0Field" alignment="CENTER" editable="false" layoutX="84.0" layoutY="211.0" visible="false" />
+            <Label layoutX="84.0" layoutY="34.0" text="Enter Keywords:">
+               <font>
+                  <Font name="Roboto Black" size="12.0" />
+               </font></Label>
+            <TextField fx:id="keywordsField" layoutX="184.0" layoutY="30.0" prefHeight="25.0" prefWidth="206.0" promptText="Zipcode or City, State Initials" text=":auto" />
+            <Button fx:id="searchButton" layoutX="406.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleSearchButton" text="Search" />
+            <Label layoutX="223.0" layoutY="55.0" text="e.g. 95650 or Rocklin, CA" />
+            <TextField fx:id="day1Field" alignment="CENTER" layoutX="10.0" layoutY="284.0" visible="false" />
+            <TextField fx:id="day2Field" alignment="CENTER" layoutX="167.0" layoutY="284.0" visible="false" />
+            <TextField fx:id="day3Field" alignment="CENTER" layoutX="323.0" layoutY="284.0" visible="false" />
+            <TextField fx:id="day4Field" alignment="CENTER" layoutX="482.0" layoutY="284.0" visible="false" />
+            <TextField fx:id="temp1HighField" alignment="CENTER" editable="false" layoutX="84.0" layoutY="318.0" prefHeight="17.0" prefWidth="45.0" visible="false" />
+            <Label fx:id="highLabel1" layoutX="19.0" layoutY="322.0" text="High:" textFill="WHITE" visible="false" />
+            <Label fx:id="lowLabel1" layoutX="21.0" layoutY="357.0" text="Low:" textFill="WHITE" visible="false" />
+            <TextField fx:id="temp1LowField" alignment="CENTER" editable="false" layoutX="84.0" layoutY="353.0" prefHeight="17.0" prefWidth="45.0" visible="false" />
+            <Label fx:id="conditions1" layoutX="54.0" layoutY="386.0" text="Conditions:" textFill="WHITE" visible="false" />
+            <TextField fx:id="cond1Field" alignment="CENTER" editable="false" layoutX="10.0" layoutY="410.0" visible="false" />
+            <ImageView fx:id="icon1View" fitHeight="69.0" fitWidth="97.0" layoutX="36.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="highLabel2" layoutX="186.0" layoutY="320.0" text="High:" textFill="WHITE" visible="false" />
+            <Label fx:id="lowLabel2" layoutX="188.0" layoutY="357.0" text="Low:" textFill="WHITE" visible="false" />
+            <TextField fx:id="temp2HighField" alignment="CENTER" editable="false" layoutX="241.0" layoutY="318.0" prefHeight="17.0" prefWidth="45.0" visible="false" />
+            <TextField fx:id="temp2LowField" alignment="CENTER" editable="false" layoutX="241.0" layoutY="353.0" prefHeight="17.0" prefWidth="45.0" visible="false" />
+            <Label fx:id="conditions2" layoutX="211.0" layoutY="386.0" text="Conditions:" textFill="WHITE" visible="false" />
+            <TextField fx:id="cond2Field" alignment="CENTER" editable="false" layoutX="167.0" layoutY="410.0" visible="false" />
+            <Label fx:id="highLabel3" layoutX="343.0" layoutY="322.0" text="High:" textFill="WHITE" visible="false" />
+            <Label fx:id="lowLabel3" layoutX="345.0" layoutY="357.0" text="Low:" textFill="WHITE" visible="false" />
+            <Label fx:id="conditions3" layoutX="367.0" layoutY="386.0" text="Conditions:" textFill="WHITE" visible="false" />
+            <TextField fx:id="temp3HighField" alignment="CENTER" editable="false" layoutX="397.0" layoutY="318.0" prefHeight="17.0" prefWidth="45.0" visible="false" />
+            <TextField fx:id="temp3LowField" alignment="CENTER" editable="false" layoutX="397.0" layoutY="353.0" prefHeight="17.0" prefWidth="45.0" visible="false" />
+            <TextField fx:id="cond3Field" alignment="CENTER" editable="false" layoutX="323.0" layoutY="410.0" visible="false" />
+            <Label fx:id="highLabel4" layoutX="502.0" layoutY="322.0" text="High:" textFill="WHITE" visible="false" />
+            <Label fx:id="lowLabel4" layoutX="504.0" layoutY="357.0" text="Low:" textFill="WHITE" visible="false" />
+            <Label fx:id="conditions4" layoutX="526.0" layoutY="386.0" text="Conditions:" textFill="WHITE" visible="false" />
+            <TextField fx:id="temp4HighField" alignment="CENTER" editable="false" layoutX="563.0" layoutY="318.0" prefHeight="17.0" prefWidth="45.0" visible="false" />
+            <TextField fx:id="temp4LowField" alignment="CENTER" editable="false" layoutX="563.0" layoutY="353.0" prefHeight="17.0" prefWidth="45.0" visible="false" />
+            <TextField fx:id="cond4Field" alignment="CENTER" editable="false" layoutX="481.0" layoutY="410.0" visible="false" />
+            <ImageView fx:id="icon2View" fitHeight="69.0" fitWidth="97.0" layoutX="192.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="icon3View" fitHeight="69.0" fitWidth="97.0" layoutX="348.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="icon4View" fitHeight="69.0" fitWidth="97.0" layoutX="507.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="locationField" alignment="CENTER" editable="false" layoutX="84.0" layoutY="238.0" visible="false" />
+            <Button fx:id="radarButton" layoutX="479.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleRadarButton" text="Radar" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
